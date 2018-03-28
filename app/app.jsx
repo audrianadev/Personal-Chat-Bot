@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+var ChatBox = require("ChatBox");
+
 ReactDOM.render(
-    <h1>Boilerplate app</h1>,
+    <ChatBox/>,
     document.getElementById('app')
 );
