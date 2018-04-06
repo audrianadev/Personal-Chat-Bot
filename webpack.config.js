@@ -15,17 +15,18 @@ module.exports ={
       './node_modules',
       './app/',
       './app/components',
-      './app/components/answers',
-      './app/components/questions',
+      './app/components/conversation',
       './app/api',
 
     ],
     alias:{
       ChatBox: 'app/components/ChatBox.jsx',
-      Answer: 'app/components/answers/Answer.jsx',
-      Question: 'app/components/questions/Question.jsx',
-      AskQuestion: 'app/components/questions/AskQuestion.jsx',
-      ConversationList: 'app/components/ConversationList.jsx'
+      ConversationPiece: 'app/components/conversation/ConversationPiece.jsx',
+      AskQuestion: 'app/components/conversation/AskQuestion.jsx',
+      ConversationList: 'app/components/conversation/ConversationList.jsx',
+      actions: 'app/actions/actions.jsx',
+      reducers: 'app/reducers/reducers.jsx',
+      configureStore: 'app/store/configureStore.jsx'
     },
     extensions: ['.*','.js', '.jsx', '.json'],
     symlinks: false
