@@ -1,13 +1,13 @@
 var React = require('react');
 var {connect} = require('react-redux');
 import {addToConversation} from 'actions';
-var ChatBot = require('ChatBot');
+var ChatBotAPI = require('ChatBotAPI');
 
 
 export class AskQuestion extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {questionText: ''};
+    this.state = {questionText: '', events: []};
 
     //bind method so that it has access to 'this'
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +22,7 @@ export class AskQuestion extends React.Component{
     e.preventDefault();
     var questionText = this.state.questionText;
     this.props.dispatch(addToConversation(questionText, "question"));
-    this.props.dispatch(addToConversation(ChatBot.respondToQuestion(questionText), "answer"));
+    this.props.dispatch(addToConversation(ChatBotAPI.respondToQuestion(questionText), "answer"));
   }
 
   render () {
