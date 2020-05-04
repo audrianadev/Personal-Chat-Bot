@@ -1,5 +1,4 @@
 node_modules/
-TwitterCredentials.js
 firebaseConfig.js
 tests/
 token.json
