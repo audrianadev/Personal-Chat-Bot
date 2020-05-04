@@ -3,3 +3,4 @@ TwitterCredentials.js
 firebaseConfig.js
 tests/
 token.json
+public/bundle.js
