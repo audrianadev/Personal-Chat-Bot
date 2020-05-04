@@ -1,4 +1,4 @@
-var moment = require('moment');
+import moment from 'moment'
 var uuid = require('uuid');
 
 export var conversationListReducer = (state=[], action) =>{

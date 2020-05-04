@@ -21,10 +21,8 @@ export class AskQuestion extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     var questionText = this.state.questionText;
-    ChatBot.respondToQuestion(questionText);
     this.props.dispatch(addToConversation(questionText, "question"));
-console.log(this.props);
-    //console.log("Question Asked");
+    this.props.dispatch(addToConversation(ChatBot.respondToQuestion(questionText), "answer"));
   }
 
   render () {
